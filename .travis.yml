@@ -8,6 +8,7 @@ branches:
 
 before_script:
   - npm install -g cordova
+  - cordova platform add browser
 
 script:
   - cordova build browser
