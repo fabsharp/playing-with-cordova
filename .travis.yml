@@ -1,4 +1,16 @@
-language: node_js
+language: android
+dist: trusty
+android:
+  components:
+    - build-tools-26.0.2
+    - android-26
+    - add-on
+    - extra
+  licenses:
+    - 'android-sdk-preview-license-52d11cd2'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
+
 node_js:
   - "8.11.3"
 
@@ -9,9 +21,11 @@ branches:
 before_script:
   - npm install -g cordova
   - cordova platform add browser
+  - cordova platform add android
 
 script:
   - cordova build browser
+  - cordova build android
 
 deploy:
   provider: pages
