@@ -20,4 +20,4 @@ deploy:
   keep_history: true
   on:
     branch: master
-  local_dir: www
+  local_dir: platforms/browser/www
